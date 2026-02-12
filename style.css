@@ -1,0 +1,96 @@
+/* Starfield Background */
+
+#starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;   /* Behind everything */
+    background: radial-gradient(circle at center, #ffe6f0 0%, #ffd6eb 100%);
+}
+
+
+/* Page Background */
+body {
+    margin: 0;
+    padding: 0;/* Light pink backdrop */
+    font-family: 'Playfair Display', serif;
+    color: #ff1493; /* Deep pink text */
+    text-align: center;
+}
+
+@keyframes glowBackground {
+    0% { background-color: #ffe6f0; }
+    50% { background-color: #ffd6eb; }
+    100% { background-color: #ffe6f0; }
+}
+
+body {
+    animation: glowBackground 6s infinite;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 0.8; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+
+/* Main Container */
+.container {
+    padding: 50px 20px;
+}
+
+/* Main Heading */
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+/* Her Name */
+h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+/* Message Styling */
+.message {
+    font-size: 22px;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    line-height: 1.8;
+}
+
+/* Slider Styling */
+
+.slider {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slides img {
+    width: 60%;
+    height: 400px;              /* Control vertical size */
+    object-fit: cover;          /* Prevent stretching */
+    margin: 0 10px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 25px rgba(255, 20, 147, 0.3);
+    flex-shrink: 0;
+}
+
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    font-size: 18px;
+    opacity: 0.8;
+}
